@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body
+  class="container vh-100 m-auto d-flex bg-primary flex-column align-items-center shadow p-3 mb-5 bg-white rounded border">
+  <h1 class="bg-primarydisplay-4">Calculator</h1>
+  <div id="output" class="display bg-light col-4"></div>
+  <section class="container row justify-content-center">
+    <div class="col-3  d-flex flex-wrap p-0">
+      <button class="number bg-light">1</button>
+      <button class="number bg-light">2</button>
+      <button class="number bg-light">3</button>
+      <button class="number bg-light">4</button>
+      <button class="number bg-light">5</button>
+      <button class="number bg-light">6</button>
+      <button class="number bg-light">7</button>
+      <button class="number bg-light">8</button>
+      <button class="number bg-light">9</button>
+      <button class="number bg-light">0</button>
+      <button class="number bg-light">.</button>
+      <button id="enter" class="bg-dark text-white text-center p-0">Enter</button>
+    </div>
+    <div class="operators d-flex flex-column col-1 p-0">
+      <button id="clear" class="bg-primary text-white text-center">C</button>
+      <button class="operator">x²</button>
+      <button class="operator">√x</button>
+      <button class="operator bg-light">÷</button>
+      <button class="operator bg-light">x</button>
+      <button class="operator bg-light">-</button>
+      <button class="operator bg-light">+</button>
+    </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
