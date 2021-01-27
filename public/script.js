@@ -2,6 +2,10 @@
 /////////////////////////////////////////////
 Multiple operators in a row will cause the history string to break; \
   Example: "1+2+++10"
+/////////////////////////////////////////////
+"Infinity" displays after a certain point; Should it display somethinge else?
+//////////////////////////////////////////////
+clicking numbers after clicking enter on a computation will concatenate strings; should wipe previous answer.
 */
 
 // Declarations
