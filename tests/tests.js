@@ -1,17 +1,27 @@
-const { sum } = require('../functions/sum.js')
 const { sub } = require('../functions/sub.js')
-const { assert, test } = require('./assertions.js')
+const { sum } = require('../functions/sum.js')
+const { mult } = require('../functions/mult.js')
+const { div } = require('../functions/div.js')
+const { test, assert } = require('./assertions')
 
-function sumTest() {
-  const result = sum(5, 1)
-  const expected = 6
-  assert(result).is(expected)
-}
-test('sum adds numbers', sumTest)
+console.log("beginning tests...\n")
 
-function subTest() {
-  const result = sub(5, 1)
-  const expected = 4
-  assert(result).is(expected)
-}
-test('sum subtracts numbers', subTest)
+test('SUB working as expected', async () => {
+  const result = await sub(10, 1)
+  assert(result).is(9)
+})
+
+test('SUM working as expected', async () => {
+  const result = await sum(10, 1)
+  assert(result).is(11)
+})
+
+test('MULT working as expected', async () => {
+  const result = await mult(10, 3)
+  assert(result).is(30)
+})
+
+test('DIV working as expected', async () => {
+  const result = await div(12, 2)
+  assert(result).is(6)
+})

@@ -9,16 +9,25 @@ function assert(result) {
       if (result != expected) {
         throw new Error(`${result} is not loosely equal to ${expected}`)
       }
+    }, isGreaterThan(expected) {
+      if (!(result > expected)) {
+        throw new Error(`${result} is not greater than ${expected}`)
+      }
+    },
+    isLessThan(expected) {
+      if (!(result < expected)) {
+        throw new Error(`${result} is not less than ${expected}`)
+      }
     }
   }
 }
 
-function test(title, callback) {
+async function test(title, callback) {
   try {
-    callback()
-    console.log(`✓ ${title}`)
+    await callback();
+    (console.log(`\x1b[32m%s\x1b[0m`, `✓ ${title}`))
   } catch (err) {
-    console.lerror(`x ${title}`)
+    console.error(`\x1b[31m%s\x1b[0m`, `x ${title}`)
     console.error(err)
   }
 }
