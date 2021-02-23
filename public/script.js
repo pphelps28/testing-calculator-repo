@@ -76,11 +76,11 @@ function calcAnswer() {
   output.textContent = eval(history)
   calcState.enterClick = true
 }
+// 
 // Event Listeners
 numButtons.forEach(button => {
   button.addEventListener("click", numberClick)
 })
-
 operatorButtons.forEach(button => {
   button.addEventListener("click", operatorClick)
 })
@@ -88,3 +88,4 @@ clearButton.addEventListener("click", clearCalc)
 enterButton.addEventListener("click", calcAnswer)
 
 
+module.exports = { numberClick, operatorClick, calcAnswer, clearCalc }
